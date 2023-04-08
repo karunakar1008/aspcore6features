@@ -1,0 +1,11 @@
+﻿@page
+@model aspcore6features.Pages.DbConnectModel
+
+<p>How connection string are changed based on <strong>ASPNETCORE_ENVIRONMENT</strong> value</p>
+
+<p>Connection string :<b style="color:red"> @Model.MyDbConnectionString</b></p>
+
+<p>myKey: @ViewData["myKey"]</p>
+<p>first value: @ViewData["firstValue"]</p>
+<p>first value: @ViewBag.firstValue</p>
+<p>second vlaue:@TempData["secondValue"]</p>
