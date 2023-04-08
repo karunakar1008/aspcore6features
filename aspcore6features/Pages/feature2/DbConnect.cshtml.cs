@@ -16,6 +16,14 @@ namespace aspcore6features.Pages
         }
         public void OnGet()
         {
+            var myKeyValue = _configuration["MyKey"];
+            var firstValue = _configuration["Nested:FirstValue"];
+            var secondValue = _configuration["Nested:SecondValue"];
+            ViewData["myKey"] = myKeyValue;
+            ViewData["firstvalue"] = firstValue;
+            //ViewBag.firstvalue= firstValue; //
+            TempData["secondValue"] = secondValue;
+
             MyDbConnectionString = _configuration["ConnectionStrings:DefaultConnection"];
         }
     }
