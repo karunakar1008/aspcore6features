@@ -1,8 +1,10 @@
+using aspcore6features.Areas.Company.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
-
+builder.Services.AddTransient<ICommonService, CommonService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
