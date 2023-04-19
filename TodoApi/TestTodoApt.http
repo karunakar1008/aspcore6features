@@ -1,0 +1,32 @@
+﻿GET https://localhost:7039/api/todoitems
+###
+GET https://localhost:7039/api/todoitems/2
+
+###
+POST https://localhost:7039/api/todoitems
+Content-Type: application/json
+
+{
+    "id":2,
+    "name":"Sreenu",
+    "IsComplete":false
+}
+###
+PUT https://localhost:7039/api/todoitems/2
+Content-Type: application/json
+
+{
+    "id":2,
+    "name":"Sreenu",
+    "IsComplete":true
+}
+
+###
+DELETE https://localhost:7039/api/todoitems/2
+Content-Type: application/json
+
+{
+    "id":2,
+    "name":"Sreenu",
+    "IsComplete":true
+}
